@@ -7,6 +7,7 @@ import authRouter from "./src/routes/authRoutes.js";
 import { errorHandler } from "./src/middlewares/errorHandler.js";
 import {requestLogger} from "./src/middlewares/requestLogger.js"
 import testRouter from "./src/routes/test.js"
+import uploadRouter from "./src/routes/uploadRoutes.js"
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(requestLogger);
 
 app.use("/auth", authRouter);
 app.use("/test", testRouter);
+app.use("/uploads", uploadRouter);
 
 app.use(errorHandler);
 app.get('/', (req, res) => {
