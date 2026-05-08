@@ -1,0 +1,40 @@
+{
+  "register": {
+    "status": 201,
+    "body": "{\"user\":\"cmox028mr0005twbf2j2xs7ge\",\"email\":\"upload-1778249873879@test.com\",\"createdAt\":\"2026-05-08T14:17:54.484Z\"}"
+  },
+  "login": {
+    "status": 200,
+    "body": "{\"message\":\"Đăng nhập thành công!\",\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNtb3gwMjhtcjAwMDV0d2JmMmoyeHM3Z2UiLCJlbWFpbCI6InVwbG9hZC0xNzc4MjQ5ODczODc5QHRlc3QuY29tIiwiaWF0IjoxNzc4MjQ5ODc1LCJleHAiOjE3NzgyNTcwNzV9.GQmafuz4qjsIQWeIC6M2z8T2p3OXJv_pqZ17ACRqDbA\"}"
+  },
+  "projectId": "cmox02akf0001g9r7qn7l90xa",
+  "zipValid": {
+    "status": 201,
+    "body": "{\"id\":\"cmox02beq0007twbf3alf6un8\",\"status\":\"pending\",\"createdAt\":\"2026-05-08T14:17:58.082Z\"}"
+  },
+  "zipCorrupt": {
+    "status": 422,
+    "body": "{\"message\":\"ZIP corrupted hoặc không hợp lệ\"}"
+  },
+  "zipBomb": {
+    "status": 422,
+    "body": "{\"message\":\"Quá nhiều file trong ZIP\"}"
+  },
+  "githubOk": {
+    "status": 201,
+    "body": "{\"id\":\"cmox02bmq0009twbfaqb3ofad\",\"status\":\"pending\",\"createdAt\":\"2026-05-08T14:17:58.370Z\"}"
+  },
+  "githubBad": {
+    "status": 400,
+    "body": "{\"error\":{\"formErrors\":[],\"fieldErrors\":{\"repoUrl\":[\"Invalid URL\",\"URL must be a GitHub repository\"]}}}"
+  },
+  "latestUpload": {
+    "id": "cmox02bmq0009twbfaqb3ofad",
+    "projectId": "cmox02akf0001g9r7qn7l90xa",
+    "type": "github_url",
+    "storagePath": null,
+    "repoUrl": "https://github.com/test/test-repo",
+    "status": "pending",
+    "createdAt": "2026-05-08T14:17:58.370Z"
+  }
+}

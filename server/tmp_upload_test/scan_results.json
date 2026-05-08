@@ -1,0 +1,10 @@
+{
+  "corrupt": {
+    "ok": false,
+    "reason": "ZIP corrupted hoặc không hợp lệ"
+  },
+  "bomb": {
+    "ok": false,
+    "reason": "Quá nhiều file trong ZIP"
+  }
+}
