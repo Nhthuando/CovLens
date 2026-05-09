@@ -37,3 +37,19 @@ export const login = async (req,res) => {
         return res.status(500).json({message: "Có lỗi server!"});
     }
 }
+
+export const callbackGithub = async (req,res) => {
+    try {
+        const user = req.user;
+        if(!user) return res.status(401).json({message: "Không thể lấy thông tin user!"});
+        const token = jwt.sign({id: user.id, email: user.email}, process.env.JWT_SECRET,{expiresIn: "2h"});
+        return res.status(200).json({message: "Đăng nhập thành công!", token});
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({message: "Có lỗi server!"});
+    }
+}
+
+export const callbackGithubFailed = async (req,res) => {
+    return res.status(401).json({ message: "Đăng nhập GitHub thất bại!" })
+}
