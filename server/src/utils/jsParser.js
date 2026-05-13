@@ -31,5 +31,5 @@ export const parserFile = async (filePath) => {
     if (tree.rootNode.hasError) {
         throw new Error(`File chứa syntax error: ${filePath}`);
     }
-    return tree.rootNode.toString();
+    return tree.rootNode;
 }
